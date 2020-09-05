@@ -33,11 +33,6 @@ bot.on('message', message=>{
         case 'ping':
             message.channel.send(`Pong! Sent in the speed of ${bot.pings[0]}`) 
         break;
-                
-        case 'clear':
-            if(!args[1]) return message.reply('Error, please define the second arg')
-            message.channel.bulkDelete(args[1]);
-        break;
 
         case 'userinfo':
             var embed = new Discord.RichEmbed()
@@ -96,4 +91,4 @@ bot.on('message', message=>{
     }
 })
 
-bot.login(token);
+bot.login(process.env.BOT_TOKEN)
