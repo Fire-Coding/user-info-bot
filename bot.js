@@ -14,7 +14,7 @@ bot.on('ready', () =>{
     let statuses = [
         `${bot.guilds.size} Servers!`,
         `${bot.users.size} People!`,
-        '8 Commands!'
+        '-help'
     ]
 
     setInterval(function() {
@@ -44,7 +44,7 @@ bot.on('message', message=>{
             message.channel.sendEmbed(embed);
         break;
 
-        case 'commands':
+        case 'help':
             var embed = new Discord.RichEmbed()
             .setTitle('Commands')
             .addField('Commands List', '-commands')
