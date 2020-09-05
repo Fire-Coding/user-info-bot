@@ -9,9 +9,9 @@ var version = "1.0.0"
 
 bot.on('ready', () =>{
     console.log('User Info Bot is online!')
-    bot.user.setActivity("User Info Bot v2 is now out!", {type: "PLAYING"})
+    //bot.user.setActivity("User Info Bot v2 is now out!", {type: "PLAYING"})
 
-    /*let statuses = [
+    let statuses = [
         `${bot.guilds.size} Servers!`,
         `${bot.users.size} People!`,
         '-help'
@@ -20,7 +20,7 @@ bot.on('ready', () =>{
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         bot.user.setActivity(status, {type: "WATCHING"});
-    }, 5000)*/
+    }, 5000)
 })
 
 
