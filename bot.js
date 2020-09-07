@@ -29,15 +29,7 @@ bot.on('message', message=>{
 
     switch(args[0]){
         case 'ping':
-            //message.channel.send(`Pong! Sent in the speed of ${bot.pings[0]}`) 
-            message.channel.send("Pinging...").then(m =>{
-
-            var ping = m.createdTimestamp - message.createdTimestamp;
-            
-            var embed = new Discord.MessageEmbed()
-            .setAuthor(`Your ping is ${ping}`)
-            m.edit(embed)
-        }
+            message.channel.send(`Pong! ${ping}ms`) 
         break;
 
         case 'userinfo':
