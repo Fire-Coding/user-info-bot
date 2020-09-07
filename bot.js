@@ -38,7 +38,7 @@ bot.on('message', message=>{
             .addField('Player Name', message.author.username)
             .addField('Server Sent From', message.guild.name)
             .setColor(0xF92C00)
-            .setThumbnail(message.author.avatarURL)
+            .setThumbnail(message.author.iconURL)
             message.channel.send(embed);
         break;
 
