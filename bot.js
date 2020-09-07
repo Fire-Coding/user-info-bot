@@ -29,7 +29,7 @@ bot.on('message', message=>{
 
     switch(args[0]){
         case 'ping':
-            message.channel.send(`Pong! ${ping}ms`) 
+            message.channel.send('Pong!');
         break;
 
         case 'userinfo':
