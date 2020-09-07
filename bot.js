@@ -28,23 +28,17 @@ bot.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]){
-        /*case 'ping':
-            message.channel.send(`Pong! Sent in the speed of ${bot.pings[0]}`) 
-        break;*/
-            
-        if(cmd === `${prefix}ping `) {
-  
-  // It sends the user "Pinging"
-        message.channel.send("Pinging...").then(m =>{
-          // The math thingy to calculate the user's ping
-            var ping = m.createdTimestamp - message.createdTimestamp;
+        case 'ping':
+            //message.channel.send(`Pong! Sent in the speed of ${bot.pings[0]}`) 
+            message.channel.send("Pinging...").then(m =>{
 
-          // Basic embed
+            var ping = m.createdTimestamp - message.createdTimestamp;
+            
             var embed = new Discord.MessageEmbed()
             .setAuthor(`Your ping is ${ping}`)
             m.edit(embed)
-        });
-    }
+        }
+        break;
 
         case 'userinfo':
             var embed = new Discord.MessageEmbed()
