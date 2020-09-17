@@ -49,7 +49,7 @@ bot.on('message', message=>{
             .addField('Pong!', '-ping')
             .addField('Gives Info on You!', `-userinfo`)
             .addField('Gives Info on the Bot!', '-botinfo')
-            .addField('Developer Info', '-devinfo')
+            //.addField('Developer Info', '-devinfo')
             .addField('Invite Bot', '-invite')
             .addField('Discord', '-discord')
             .setColor(0xF92C00)
@@ -60,8 +60,8 @@ bot.on('message', message=>{
             var embed = new Discord.MessageEmbed()
             .setTitle('Bot Info')
             .addField('Version', version)
-            .addField('Lines of Code', '64')
-            .addField('Developer', 'BlaZed')
+            .addField('Lines of Code', '91')
+            .addField('Developer', 'Overblown')
             .setColor(0xF92C00)
             message.channel.send(embed);
         break;
