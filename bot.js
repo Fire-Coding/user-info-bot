@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 const PREFIX = "-";
 
-var version = "1.0.0"
+var version = "1.0.1"
 
 bot.on('ready', () =>{
     console.log('User Info Bot is online!')
