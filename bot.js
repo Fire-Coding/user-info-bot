@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client();
 
-const PREFIX = "-";
+const prefix = "-";
 
 var version = "1.1"
 
@@ -25,7 +25,7 @@ bot.on('ready', () =>{
 
 bot.on('message', message=>{
     
-    let args = message.content.substring(PREFIX.length).split(" ");
+    let args = message.content.substring(prefix.length).split(" ");
 
     let member = message.mentions.members.first() || message.member
         user = member.user;
