@@ -7,7 +7,7 @@ var version = "1.1"
 
 bot.on('ready', () =>{
     console.log('User Info Bot is online!')
-    bot.user.setActivity("TESTING RIGHT NOW", {type: "WATCHING"})
+    bot.user.setActivity("TEST 2", {type: "WATCHING"})
 
     /*let statuses = [
         `${bot.guilds.size} Servers!`,
@@ -36,7 +36,7 @@ bot.on('message', message=>{
         };
 
         if (message.content === `${prefix}userinfo`) {
-            var userinfoembed = new Discord.MessageEmbed()
+            const userinfoembed = new Discord.MessageEmbed()
             .setTitle('User Information')
             .addField('Player Name', message.author.username)
             .addField('Server Sent From', message.guild.name)
@@ -47,7 +47,7 @@ bot.on('message', message=>{
         }
 
         if (message.content === `${prefix}help`) {
-            var helpmenuembed = new Discord.MessageEmbed()
+            const helpmenuembed = new Discord.MessageEmbed()
             .setTitle('Commands')
             .addField('Commands List', '-help')
             .addField('Pong!', '-ping')
@@ -61,7 +61,7 @@ bot.on('message', message=>{
         }
 
         if (message.content === `${prefix}botinfo`) {
-            var botinfoembed = new Discord.MessageEmbed()
+            const botinfoembed = new Discord.MessageEmbed()
             .setTitle('Bot Info')
             .addField('Servers', `${bot.guilds.cache.size}`)
             .addField('Version', version)
@@ -72,7 +72,7 @@ bot.on('message', message=>{
         }
 
         if (message.content === `${prefix}devinfo`) {
-            var devembed = new Discord.MessageEmbed()
+            const devembed = new Discord.MessageEmbed()
             .setTitle('Owner Info')
             .addField('Online Name', 'Overblown')
             .addField('YouTube', 'Overblown')
