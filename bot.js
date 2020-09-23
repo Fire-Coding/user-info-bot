@@ -7,7 +7,7 @@ var version = "1.1"
 
 bot.on('ready', () =>{
     console.log('User Info Bot is online!')
-    bot.user.setActivity("users to give them info.", {type: "WATCHING"})
+    bot.user.setActivity("TESTING RIGHT NOW", {type: "WATCHING"})
 
     /*let statuses = [
         `${bot.guilds.size} Servers!`,
@@ -36,18 +36,18 @@ bot.on('message', message=>{
         };
 
         if (message.content === `${prefix}userinfo`) {
-            var embed = new Discord.MessageEmbed()
+            var userinfoembed = new Discord.MessageEmbed()
             .setTitle('User Information')
             .addField('Player Name', message.author.username)
             .addField('Server Sent From', message.guild.name)
             .addField('Server Join Date', `${moment.utc(member.joinedAt).format('DD/MM/YY')}` + "\n")
             .setColor(0xF92C00)
             .setThumbnail(message.author.avatarURL());
-            message.channel.send(embed);
+            message.channel.send(userinfoembed);
         }
 
         if (message.content === `${prefix}help`) {
-            var embed = new Discord.MessageEmbed()
+            var helpmenuembed = new Discord.MessageEmbed()
             .setTitle('Commands')
             .addField('Commands List', '-help')
             .addField('Pong!', '-ping')
@@ -57,28 +57,28 @@ bot.on('message', message=>{
             .addField('Invite Bot', '-invite')
             .addField('Discord', '-discord')
             .setColor(0xF92C00)
-            message.channel.send(embed);
+            message.channel.send(helpmenuembed);
         }
 
         if (message.content === `${prefix}botinfo`) {
-            var embed = new Discord.MessageEmbed()
+            var botinfoembed = new Discord.MessageEmbed()
             .setTitle('Bot Info')
             .addField('Servers', `${bot.guilds.cache.size}`)
             .addField('Version', version)
             .addField('Lines of Code', '95')
             .addField('Developer', 'Overblown')
             .setColor(0xF92C00)
-            message.channel.send(embed);
+            message.channel.send(botinfoembed);
         }
 
         if (message.content === `${prefix}devinfo`) {
-            var embed = new Discord.MessageEmbed()
+            var devembed = new Discord.MessageEmbed()
             .setTitle('Owner Info')
             .addField('Online Name', 'Overblown')
             .addField('YouTube', 'Overblown')
             .addField('Did he make this bot on his own?', 'Yes, but with some help with the internet.')
             .setColor(0xF92C00)
-            message.channel.send(embed);
+            message.channel.send(devembed);
         }
 
         if (message.content === `${prefix}invite`) {
