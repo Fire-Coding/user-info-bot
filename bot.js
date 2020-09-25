@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const moment = require('moment')
 const bot = new Discord.Client();
 
 const prefix = "-";
@@ -7,7 +8,7 @@ var version = "1.1"
 
 bot.on('ready', () =>{
     console.log('User Info Bot is online!')
-    bot.user.setActivity("BOT BROKEN, WILL FIX ON FRIDAY OR SATURDAY", {type: "PLAYING"})
+    bot.user.setActivity("with info.", {type: "PLAYING"})
 
     /*let statuses = [
         `${bot.guilds.size} Servers!`,
@@ -25,10 +26,9 @@ bot.on('ready', () =>{
 
 bot.on('message', message=>{
     
-    let args = message.content.substring(prefix.length).split(" ");
-
     let member = message.mentions.members.first() || message.member
         user = member.user;
+    let args = message.content.substring(prefix.length).split(" ");
 
     //switch(args[0]){
         if (message.content === `${prefix}ping`) {
