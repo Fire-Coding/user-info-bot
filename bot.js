@@ -80,6 +80,13 @@ bot.on('message', message=>{
             .setColor(0xF92C00)
             message.channel.send(devembed);
         }
+    
+        if (message.content === `${prefix}help`) {
+            const testcmd = new Discord.MessageEmbed()
+            .setTitle('This is a public test command')
+            .addField('Time', `${moment.utc.format('MMMM Do YYYY, h:mm:ss a');}` + "\n")
+            message.channel.send(testcmd);
+        }
 
         if (message.content === `${prefix}invite`) {
             message.channel.send('Invite:')
