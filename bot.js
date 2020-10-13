@@ -67,7 +67,7 @@ bot.on('message', message=>{
             .addField('Version', version)
             .addField('Lines of Code', '98')
             .addField('Developer', 'Overblown')
-            .setThumbnail('https://media.discordapp.net/attachments/712418633451569152/762072545863139378/robot.png?width=100&height=100')
+            .setThumbnail('https://media.discordapp.net/attachments/712418633451569152/762072545863139378/robot.png?width=200&height=200')
             .setFooter('Got any suggestions? Join the server and ask them in #bot-suggestions!')
             .setColor(0xF92C00)
             message.channel.send(botinfoembed);
