@@ -65,18 +65,20 @@ bot.on('message', message=>{
             .setTitle('Bot Info')
             .addField('Servers', `${bot.guilds.cache.size}`)
             .addField('Version', version)
-            .addField('Lines of Code', '95')
+            .addField('Lines of Code', '98')
             .addField('Developer', 'Overblown')
+            .setFooter('Got any suggestions? Join the server and ask them in #bot-suggestions!')
             .setColor(0xF92C00)
             message.channel.send(botinfoembed);
         }
 
         if (message.content === `${prefix}devinfo`) {
             const devembed = new Discord.MessageEmbed()
-            .setTitle('Owner Info')
+            .setTitle('Developer Info')
             .addField('Online Name', 'Overblown')
-            .addField('YouTube', 'Overblown')
+            .addField('Twitter', '@OverblownDev')
             .addField('Did he make this bot on his own?', 'Yes, but with some help with the internet.')
+            .setFooter('YouTube: Overblown')
             .setColor(0xF92C00)
             message.channel.send(devembed);
         }
