@@ -24,7 +24,7 @@ bot.on('ready', () =>{
 
 
 
-bot.on('message', message=>{
+bot.on('message', async message=>{
     
     let member = message.mentions.members.first() || message.member
         user = member.user;
