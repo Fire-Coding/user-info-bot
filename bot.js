@@ -38,7 +38,7 @@ bot.on('message', async message=>{
             msg.edit(
             `Pong! \n Latency is ${Math.floor(
             msg.createdAt - message.createdAt
-            )}ms \n API Latency ${Math.round(bot.ping)}ms`
+            )}ms \n API Latency is ${Math.round(bot.ping)}ms`
             );
         };
 
