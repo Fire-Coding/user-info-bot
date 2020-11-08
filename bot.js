@@ -8,7 +8,7 @@ var version = "1.2"
 
 bot.on('ready', () =>{
     console.log('User Info Bot is online!')
-    bot.user.setActivity("with info.", {type: "PLAYING"})
+    bot.user.setActivity("with info. | Prefix is -", {type: "PLAYING"})
 
     /*let statuses = [
         `${bot.guilds.size} Servers!`,
