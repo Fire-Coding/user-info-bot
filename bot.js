@@ -36,9 +36,9 @@ bot.on('message', async message=>{
             const msg = await message.channel.send(`Pinging...`);
 
             msg.edit(
-            `Pong! \n Latency is ${Math.floor(
+            `Pong!\nLatency is ${Math.floor(
             msg.createdAt - message.createdAt
-            )}ms \n API Latency is ${Math.round(bot.ping)}ms`
+            )}ms\nAPI Latency is ${Math.round(bot.ping)}ms`
             );
         };
 
