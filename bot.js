@@ -27,7 +27,7 @@ bot.on('ready', () =>{
 bot.on('message', async message=>{
     
     let member = message.mentions.members.first() || message.member
-        user = member.user;
+    let user = member.user;
     let args = message.content.substring(prefix.length).split(" ");
 
     //switch(args[0]){
