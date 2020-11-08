@@ -76,7 +76,7 @@ bot.on('message', async message=>{
             .setTitle('Bot Info')
             .addField('Servers', `${bot.guilds.cache.size}`)
             .addField('Version', version)
-            .addField('Lines of Code', '121')
+            .addField('Lines of Code', '123')
             .addField('Developer', 'Overblown')
             .setThumbnail('https://media.discordapp.net/attachments/712418633451569152/762072545863139378/robot.png?width=200&height=200')
             .setFooter('Got any suggestions? Join the server and ask them in #bot-suggestions!')
