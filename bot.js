@@ -105,7 +105,7 @@ bot.on('message', async message=>{
             message.channel.send('https://discord.gg/BCukkMX')
         }
     
-        if (message.content.startsWith('.say')) {
+        if (message.content === `${prefix}say`) {
               let msg;
               let textChannel = message.mentions.channels.first()
               message.delete()
