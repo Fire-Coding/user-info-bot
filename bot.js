@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 const prefix = "-";
 
-var version = "1.1.1"
+var version = "1.2"
 
 bot.on('ready', () =>{
     console.log('User Info Bot is online!')
