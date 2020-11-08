@@ -42,17 +42,18 @@ bot.on('message', async message=>{
         };
 
         if (message.content === `${prefix}userinfo`) {
-            const userinfoembed = new Discord.MessageEmbed()
-            .setTitle('User Information')
-            .addField('User Name', message.member.user.tag)
-            .addField("User ID", message.member.id)
-            .addField("Discord Account Creation", `${createdDate.toUTCString()}`)
-            .addField('Server Sent From', message.guild.name)
-            .addField('Server Join Date', `${moment.utc(member.joinedAt).format('DD/MM/YY')}` + "\n")
-            .setColor(0xF92C00)
-            .setThumbnail(message.author.avatarURL());
-            message.channel.send(userinfoembed);
-        }
+        const userinfoembed = new Discord.MessageEmbed()
+        .setTitle('User Information')
+        .addField('User Name', message.member.user.tag)
+        .addField("User ID", message.member.id)
+        .addField("Discord Account Creation", `${createdDate.toUTCString()}`)
+        .addField('Server Sent From', message.guild.name)
+        .addField('Server Join Date', `${moment.utc(member.joinedAt).format('DD/MM/YY')}` + "\n")
+        .setColor(0xF92C00)
+        .setThumbnail(message.author.avatarURL());
+        message.channel.send(userinfoembed);
+    }
+
 
         if (message.content === `${prefix}help`) {
             const helpmenuembed = new Discord.MessageEmbed()
