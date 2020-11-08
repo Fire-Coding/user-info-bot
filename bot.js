@@ -32,13 +32,21 @@ bot.on('message', message=>{
 
     //switch(args[0]){
         if (message.content === `${prefix}ping`) {
-            message.channel.send('Pong!');
+            const msg = await message.channel.send(`Pinging...`);
+
+            msg.edit(
+            `Pong! \n Latency is ${Math.floor(
+            msg.createdAt - message.createdAt
+            )}ms \n API Latency ${Math.round(bot.ping)}ms`
+            );
         };
 
         if (message.content === `${prefix}userinfo`) {
             const userinfoembed = new Discord.MessageEmbed()
             .setTitle('User Information')
-            .addField('Player Name', message.author.username)
+            .addField('User Name', message.member.user.tag)
+            .addField("User ID", message.member.id)
+            .addField("Discord Account Creation", `${createdDate.toUTCString()}`)
             .addField('Server Sent From', message.guild.name)
             .addField('Server Join Date', `${moment.utc(member.joinedAt).format('DD/MM/YY')}` + "\n")
             .setColor(0xF92C00)
@@ -51,6 +59,7 @@ bot.on('message', message=>{
             .setTitle('Commands')
             .addField('Commands List', '-help')
             .addField('Pong!', '-ping')
+            .addField('Say Command (BROKEN)', '-say')
             .addField('Gives Info on You!', `-userinfo`)
             .addField('Gives Info on the Bot!', '-botinfo')
             .addField('Developer Info', '-devinfo')
@@ -93,6 +102,20 @@ bot.on('message', message=>{
             message.channel.send('Discord:')
             message.channel.send('https://discord.gg/BCukkMX')
         }
+    
+        if (message.content.startsWith('.say')) {
+              let msg;
+              let textChannel = message.mentions.channels.first()
+              message.delete()
+
+                if(textChannel) {
+                  msg = args.slice(1).join(" ");
+                  textChannel.send(msg)
+              } else {
+                  msg = args.join(" ");
+                  message.channel.send(msg)
+              }
+          }
 })
 
 bot.login(process.env.BOT_TOKEN)
