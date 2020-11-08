@@ -29,6 +29,7 @@ bot.on('message', async message=>{
     let member = message.mentions.members.first() || message.member
     let user = member.user;
     let args = message.content.substring(prefix.length).split(" ");
+    let createdDate = user.createdAt;
 
     //switch(args[0]){
         if (message.content === `${prefix}ping`) {
