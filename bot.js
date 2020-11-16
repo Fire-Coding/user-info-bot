@@ -76,7 +76,7 @@ bot.on('message', async message=>{
             .setTitle('Bot Info')
             .addField('Servers', `${bot.guilds.cache.size}`)
             .addField('Version', version)
-            .addField('Lines of Code', '123')
+            .addField('Lines of Code', '134')
             .addField('Developer', 'Overblown')
             .setThumbnail('https://media.discordapp.net/attachments/712418633451569152/762072545863139378/robot.png?width=200&height=200')
             .setFooter('Got any suggestions? Join the server and ask them in #bot-suggestions!')
@@ -118,6 +118,17 @@ bot.on('message', async message=>{
                   message.channel.send(msg)
               }
           }
-})
+    
+        if (message.content === `${prefix}uptime`) {
+            let days = Math.floor(bot.uptime / 86400000);
+            let hours = Math.floor(bot.uptime / 3600000) % 24;
+            let minutes = Math.floor(bot.uptime / 60000) % 60;
+            let seconds = Math.floor(bot.uptime / 1000) % 60;
+
+            message.channel.send(
+                `__**Uptime:**__\n${days}d ${hours}h ${minutes}m ${seconds}s`
+            );
+        }
+    })
 
 bot.login(process.env.BOT_TOKEN)
