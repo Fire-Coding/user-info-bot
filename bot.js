@@ -61,7 +61,6 @@ bot.on('message', async message=>{
             .setTitle('Commands')
             .addField('Commands List', '-help')
             .addField('Pong!', '-ping')
-            .addField('Say Command (BROKEN)', '-say')
             .addField('Gives Info on You!', `-userinfo`)
             .addField('Gives Info on the Bot!', '-botinfo')
             .addField('Developer Info', '-devinfo')
@@ -105,19 +104,12 @@ bot.on('message', async message=>{
             message.channel.send('https://discord.gg/BCukkMX')
         }
     
-        if (message.content === `${prefix}say`) {
-              let msg;
-              let textChannel = message.mentions.channels.first()
-              message.delete()
-
-                if(textChannel) {
-                  msg = args.slice(1).join(" ");
-                  textChannel.send(msg)
-              } else {
-                  msg = args.join(" ");
-                  message.channel.send(msg)
-              }
-          }
+        if (message.content === `${prefix}servers`) {
+        bot.guilds.cache.forEach(guild => {
+            //console.log(guild)
+            message.channel.send(`${guild.name} has a total of ${guild.memberCount} members.`)
+        })
+    }
     
         if (message.content === `${prefix}uptime`) {
             let days = Math.floor(bot.uptime / 86400000);
