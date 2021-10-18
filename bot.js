@@ -112,7 +112,7 @@ bot.on('message', async message=>{
     }
     
         if (message.content === `${prefix}uptime`) {
-            let days = Math.floor(bot.uptime / 86400000);
+            let days = Math.floor(bot.uptime / 86400000) % 1;
             let hours = Math.floor(bot.uptime / 3600000) % 24;
             let minutes = Math.floor(bot.uptime / 60000) % 60;
             let seconds = Math.floor(bot.uptime / 1000) % 60;
