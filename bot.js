@@ -121,6 +121,13 @@ bot.on('message', async message=>{
                 `__**Uptime:**__\n${days}d ${hours}h ${minutes}m ${seconds}s`
             );
         }
+    
+        if (message.content === `${prefix}time`) {
+            let times = moment().format('LTS');
+            message.channel.send(
+                `The time is ${times}
+            );
+         }
     })
 
 bot.login(process.env.BOT_TOKEN)
