@@ -122,12 +122,12 @@ bot.on('message', async message=>{
             );
         }
     
-        if (message.content === `${prefix}time`) {
+        /*if (message.content === `${prefix}time`) {
             let times = moment().format('LTS');
             message.channel.send(
                 `The time is ${times}`
             );
-         }
+         }*/
     })
 
 bot.login(process.env.BOT_TOKEN)
