@@ -125,7 +125,7 @@ bot.on('message', async message=>{
         if (message.content === `${prefix}time`) {
             let times = moment().format('LTS');
             message.channel.send(
-                `The time is ${times}
+                `The time is ${times}`
             );
          }
     })
